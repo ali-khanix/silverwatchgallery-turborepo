@@ -6,6 +6,8 @@ import { User } from "lucide-react";
 import Categories from "./Categories";
 import ShoppingCartIcon from "./ShoppingCartIcon";
 import MobileNav from "./MobileNav";
+import { SignedOut, SignUpButton } from "@clerk/nextjs";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
@@ -31,10 +33,14 @@ const Navbar = () => {
         <div className="hidden sm:flex items-center justify-end sm:w-4/12 gap-4">
           <ShoppingCartIcon />
 
-          <Link href={"/user"} className="flex gap-1 hover:text-zinc-400">
-            <User size={24} />
-            <span className="text-sm">ورود یا عضو شوید</span>
-          </Link>
+          <SignedOut>
+            <SignUpButton>
+              <Button className="bg-transparent text-[12px]">
+                <User size={64} />
+                ورود یا ثبت نام
+              </Button>
+            </SignUpButton>
+          </SignedOut>
         </div>
 
         {/* MOBILE NAV */}
