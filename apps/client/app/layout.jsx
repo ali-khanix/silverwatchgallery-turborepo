@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import { ClerkProvider } from "@clerk/nextjs";
+import { faIR } from "@clerk/localizations";
 
 export const metadata = {
   title: "گالری ساعت سیلور",
@@ -14,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider localization={faIR}>
       <html lang="fa" dir="rtl">
         <body className={`${iranYekan.className} antialiased bg-zinc-100`}>
           <Navbar />
