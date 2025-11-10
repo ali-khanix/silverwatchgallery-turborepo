@@ -3,6 +3,7 @@ import cors from "cors";
 import { clerkMiddleware, getAuth } from "@clerk/express";
 
 const app = express();
+
 app.use(
   cors({
     origin: ["http://localhost:3002", "http://localhost:3003"],
@@ -22,8 +23,13 @@ app.get("/health", (req: Request, res: Response) => {
 
 app.get("/test", (req, res) => {
   const auth = getAuth(req);
-  console.log(auth);
-  res.json({ message: "Product service authenticated" });
+  const userId = auth.userId;
+
+  if (!userId) {
+    return res.status(401).json({ message: "You are not logged in!" });
+  }
+
+  res.status(201).json({ message: "Product service authenticated" });
 });
 
 app.listen(8000, () => {
