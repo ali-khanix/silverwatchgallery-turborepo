@@ -6,8 +6,15 @@ import { User } from "lucide-react";
 import Categories from "./Categories";
 import ShoppingCartIcon from "./ShoppingCartIcon";
 import MobileNav from "./MobileNav";
-import { SignedOut, SignUpButton } from "@clerk/nextjs";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 import { Button } from "./ui/button";
+import ProfileButton from "./ProfileButton";
 
 const Navbar = () => {
   return (
@@ -41,6 +48,9 @@ const Navbar = () => {
               </Button>
             </SignUpButton>
           </SignedOut>
+          <SignedIn>
+            <ProfileButton />
+          </SignedIn>
         </div>
 
         {/* MOBILE NAV */}
