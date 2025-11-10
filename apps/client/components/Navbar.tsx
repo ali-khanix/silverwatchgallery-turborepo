@@ -6,13 +6,7 @@ import { User } from "lucide-react";
 import Categories from "./Categories";
 import ShoppingCartIcon from "./ShoppingCartIcon";
 import MobileNav from "./MobileNav";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignUpButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import ProfileButton from "./ProfileButton";
 
