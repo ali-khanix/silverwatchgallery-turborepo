@@ -1,4 +1,4 @@
-import { clerkPlugin, getAuth } from "@clerk/fastify";
+import { clerkPlugin } from "@clerk/fastify";
 import Fastify from "fastify";
 import { shouldBeUser } from "./middleware/authMiddleware.js";
 

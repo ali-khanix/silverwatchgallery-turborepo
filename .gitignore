@@ -17,6 +17,7 @@ coverage
 
 # Turbo
 .turbo
+../generated/prisma
 
 # Vercel
 .vercel
