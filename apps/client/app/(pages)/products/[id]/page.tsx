@@ -20,16 +20,16 @@ const product: ProductType = {
   },
 };
 
-export const generateMetaData = async ({
-  params,
-}: {
-  params: { id: string };
-}) => {
-  return {
-    title: product.name,
-    describe: product.description,
-  };
-};
+// export const generateMetaData = async ({
+//   params,
+// }: {
+//   params: { id: string };
+// }) => {
+//   return {
+//     title: product.name,
+//     describe: product.description,
+//   };
+// };
 
 const ProductPage = async ({
   params,
