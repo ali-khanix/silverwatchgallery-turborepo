@@ -9,6 +9,10 @@ import {
 
 const router: Router = Router();
 
+router.get("/test", (req, res) => {
+  res.json({ message: "Works" });
+});
+
 router.post("/", createProduct);
 router.put("/:id", updateProduct);
 router.delete("/:id", deleteProduct);
