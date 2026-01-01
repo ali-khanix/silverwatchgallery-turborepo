@@ -13,6 +13,8 @@ export const metadata = {
   description: "فروشگاه ساعت های مردانه و زنانه",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider localization={faIR}>
